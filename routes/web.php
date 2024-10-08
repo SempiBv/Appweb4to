@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdministradorController;
+use App\Http\Controllers\AdminAuthController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -18,6 +19,11 @@ Route::get('/empleado/editar/{id}',[AdministradorController::class, 'edit']);
 Route::put('/empleado/actualizar/{id}',[AdministradorController::class, 'update']); 
 Route::get('/empleado/mostrar/{id}',[AdministradorController::class, 'show']); 
 Route::delete('/empleado/eliminar/{id}',[AdministradorController::class, 'destroy']); 
+Route::get('', function (){
+    return view('/login/form');
+});
+Route::post('/empleado/login', [AdminAuthController::class,'login']);
+Route::post('/empleado/logout', [AdminAuthController::class,'logout']);
 
 
 // Route::view('/plantilla','/plantilla/layout');

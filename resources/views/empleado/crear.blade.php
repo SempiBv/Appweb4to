@@ -12,7 +12,7 @@
             <label for="username-success" class="block mb-2 text-sm font-medium text-green-700 dark:text-green-500">Nombre</label>
             <input type="text" id="username-success" name="nombre" value="{{ old('nombre') }}"
                 class="bg-green-50 border border-green-500 text-green-900 dark:text-green-400 placeholder-green-700 dark:placeholder-green-500 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-green-500"
-                placeholder="Nombre">
+                place10holder="Nombre"0>
         </div>
 
         <div class="mb-5">
