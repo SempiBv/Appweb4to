@@ -70,7 +70,7 @@
                         </th>
                         <th scope="col" class="px-6 py-3">
                             <div class="flex items-center">
-                                Contraseña
+                                password
                                 <a href="#"><svg class="w-3 h-3 ms-1.5" aria-hidden="true"
                                         xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
                                         <path
@@ -137,7 +137,7 @@
                             {{ $item->usuario }}
                         </td>
                         <td class="px-6 py-4">
-                            {{ $item->contraseña }}
+                            {{ $item->password }}
                         </td>
                         <td class="px-6 py-4">
                             <img src="{{ $item->imagen }}" alt="{{ $item->imagen }}" width="100px">

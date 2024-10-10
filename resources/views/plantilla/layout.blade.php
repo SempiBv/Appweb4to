@@ -18,8 +18,14 @@
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
         </a>
         <div class="flex items-center space-x-6 rtl:space-x-reverse">
-            <a href="tel:5541251234" class="text-sm  text-gray-500 dark:text-white hover:underline">(555) 412-1234</a>
-            <a href="#" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline">Login</a>
+            {{-- <a href="tel:5541251234" class="text-sm  text-gray-500 dark:text-white hover:underline">(555) 412-1234</a>
+            <a href="#" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline">Logout</a> --}}
+            <form action="/empleado/logout" method="POST"
+            @csrf
+        <button type="submit"
+            class="text-sm  text-blue-600 dark:text-blue-500 hover:underline">cerrar sesion
+        </button>
+            </form>
         </div>
     </div>
 </nav>

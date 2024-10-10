@@ -49,10 +49,10 @@
         </div>
         <div class="mb-5">
             <label for="username-success" class="block mb-2 text-sm font-medium text-green-700 dark:text-green-500">
-                Contraseña</label>
-            <input type="password" id="password" name="contraseña" maxlength="256" minlength="4" required
+                password</label>
+            <input type="password" id="password" name="password" maxlength="256" minlength="4" required
                 class="bg-green-50 border border-green-500 text-green-900 dark:text-green-400 placeholder-green-700 dark:placeholder-green-500 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-green-500"
-                placeholder="Contraseña" value="{{ $empleado->contraseña}}">
+                placeholder="password" value="{{ $empleado->password}}">
  
         </div>
         <div class="mb-5">

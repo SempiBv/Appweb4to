@@ -37,10 +37,10 @@
         </div>
 
         <div class="mb-5">
-            <label for="password" class="block mb-2 text-sm font-medium text-green-700 dark:text-green-500">Contraseña</label>
-            <input type="password" id="password" name="contraseña" value="{{ old('contraseña') }}"
+            <label for="password" class="block mb-2 text-sm font-medium text-green-700 dark:text-green-500">contraseña</label>
+            <input type="password" id="password" name="password" value="{{ old('password') }}"
                 class="bg-green-50 border border-green-500 text-green-900 dark:text-green-400 placeholder-green-700 dark:placeholder-green-500 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-green-500"
-                placeholder="Contraseña">
+                placeholder="contraseña">
         </div>
 
         <div class="mb-5">

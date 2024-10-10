@@ -25,7 +25,7 @@ class AdministradorController extends Controller
             'apellidoP' => 'required|string|max:255',
             'apellidoM' => 'required|string|max:255',
             'usuario' => 'required|string|max:255|unique:empleados,usuario', // Campo único
-            'contraseña' => 'required|string|min:8',
+            'password' => 'required|string|min:8',
             'imagen' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
             'rol' => 'required|in:vendedor,panadero', // Valida que el rol esté entre las opciones válidas
         ]);
@@ -36,7 +36,7 @@ class AdministradorController extends Controller
         $empleado->apellidoP = $request->apellidoP;
         $empleado->apellidoM = $request->apellidoM;
         $empleado->usuario = $request->usuario;
-        $empleado->contraseña = $request->contraseña;
+        $empleado->password = Hash::make($request->password);
         $empleado->imagen = 'empleado_default.jpg'; // Imagen por defecto
         $empleado->rol = $request->rol;
         $empleado->estado = 'activo';
@@ -67,7 +67,7 @@ class AdministradorController extends Controller
             'apellidoP' => 'required|string|max:255',
             'apellidoM' => 'required|string|max:255',
             'usuario' => 'required|string|max:255|unique:empleados,usuario,' . $id, // Ignorar el actual usuario
-            'contraseña' => 'required|string|min:8',
+            'password' => 'required|string|min:8',
             'imagen' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
             'rol' => 'required|in:vendedor,panadero',
         ]);
@@ -77,7 +77,7 @@ class AdministradorController extends Controller
         $empleado->apellidoP = $request->apellidoP;
         $empleado->apellidoM = $request->apellidoM;
         $empleado->usuario = $request->usuario;
-        $empleado->contraseña=Hash::make($request->contraseña);
+        $empleado->password=Hash::make($request->password);
         $empleado->rol = $request->rol;
 
         $empleado->save();
