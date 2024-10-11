@@ -15,7 +15,7 @@ class AdminAuthController extends Controller
                 'contraseña' => ['required'],
             ]);
      //Select * from empleados where nombre =? and password =? and status='activo'
-            if (Auth::attempt(['nombre' => $request->$nombre,
+            if (Auth::guard('empleado')->attempt(['nombre' => $request->$nombre,
              'contraseña' => $request->$contraseña,
              'estado' => 'activo'])) {
                 $request->session()->regenerate();

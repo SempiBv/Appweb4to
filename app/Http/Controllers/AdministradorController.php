@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request; 
 use App\Models\empleado;
 use App\Models\role;
+use Illuminate\support\fecades\hash; 
 
 class AdministradorController extends Controller
 {
@@ -76,7 +77,7 @@ class AdministradorController extends Controller
         $empleado->apellidoP = $request->apellidoP;
         $empleado->apellidoM = $request->apellidoM;
         $empleado->usuario = $request->usuario;
-        $empleado->contraseña = $request->contraseña;
+        $empleado->contraseña=Hash::make($request->contraseña);
         $empleado->rol = $request->rol;
 
         $empleado->save();

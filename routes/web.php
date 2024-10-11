@@ -26,7 +26,7 @@ Route::post('/empleado/login', [AdminAuthController::class,'login']);
 Route::post('/empleado/logout', [AdminAuthController::class,'logout']);
 
 
-// Route::view('/plantilla','/plantilla/layout');
+ Route::view('/plantilla','/plantilla/layout');
 // Route::view('/empleado/lista','/empleado/listado');
 // Route::view('/empleado/crear','/empleado/crear');
 // Route::view('/cliente/lista','/cliente/listado');
